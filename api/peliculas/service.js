@@ -1,11 +1,8 @@
-const express = require('express');
-const controladorPeliculas = express.Router();
+const modeloPeliculas = require('./model');
 
+function obtenerPeliculas() {
+    let peliculas = modeloPeliculas.findAll();
+    return peliculas;
+}
 
-
-controladorPeliculas.get("obtenerPeliculas",function (req, res) {
-
-    
-} );
-
-module.exports = controladorPeliculas;
+module.exports.obtenerPeliculas = obtenerPeliculas;
