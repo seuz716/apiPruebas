@@ -30,3 +30,13 @@ controladorPeliculas.get("/obtenertPeliculasPorTitulo/:titulo" , async function 
     });
     
 })
+
+controladorPeliculas.post("/crearPelicula", async function (req, res) {
+    let datos = req.body;
+    let pelicula = await servicioPeliculas.crearPelicula(datos);
+    res.send({
+        "mensaje": pelicula.mensaje,
+        "resultado": pelicula.datos
+    })
+    
+})
