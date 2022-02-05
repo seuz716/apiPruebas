@@ -1,4 +1,4 @@
-const basedatos = require('../../database/connection');
+const basedatos = require('../../database/conecction');
 const objectId = require('mongodb').ObjectId;
 
 /*

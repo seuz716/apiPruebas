@@ -1,4 +1,4 @@
-const basedatos = require('../../database/connection');
+const basedatos = require('../../database/conecction');
 
 async function crearUno(datosUsuario){
     let db = basedatos.obtenerConexion();

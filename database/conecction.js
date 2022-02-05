@@ -29,3 +29,5 @@ const obtenerConexion = function () {
 
 
 module.exports = {conectar, obtenerConexion}
+
+

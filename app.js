@@ -10,14 +10,14 @@ const compression = require('compression');
 const path = require('path');
 const controladorPeliculas = require('./api/peliculas/controller');
 const controladorUsuarios = require('./api/usuarios/controller');
-const database = require('./database/connection');
+const database = require('./database/conecction');
 require('dotenv').config();
 
 /*
     INICIAR LA CONFIGURACIÓN
 */
 const app = express();
-const port = process.env.PORT;
+const port = process.env.API_PORT;
 app.use(cors());
 app.use(helmet());
 app.use(compression());
@@ -26,7 +26,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(morgan(process.env.MORGAN_MODE));
 
 /*
-    INICIAR LAS RUTAS.
+    INICIAR LAS RUTAS .
 */
 app.use("/api/peliculas", controladorPeliculas);
 app.use("/api/usuarios", controladorUsuarios);
